@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <style>
+        body { background:blue}
+        h1{
+            font-size:50px;
+            font-family: algerian;
+            text-align: center;
+            margin-top:20%
+        }
+        .fa{
+            margin-left: 20px;
+            font-size:100px
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>I am <br>Thermameter <span id="temp" class="fa"></span></h1>
+
+
+    <script>
+
+   const tempLoad=()=>{
+       let temp= document.getElementById('temp');
+       temp.innerHTML="&#xf2cb";
+
+       setTimeout(()=>{
+        temp.innerHTML="&#xf2ca";
+        temp.style.color="yellow"
+       },1000)
+       setTimeout(()=>{
+        temp.innerHTML="&#xf2c9";
+        temp.style.color="yellow"
+       },2000)
+       setTimeout(()=>{
+        temp.innerHTML="&#xf2c8";
+        temp.style.color="orange"
+       },3000)
+       setTimeout(()=>{
+        temp.innerHTML="&#xf2c7";
+        temp.style.color="red"
+       },4000)
+   }
+
+        tempLoad();
+
+        setInterval(tempLoad,5000)
+    </script>
+    
+</body>
+</html>
